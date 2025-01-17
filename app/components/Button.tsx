@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({
     disabled,
     outline,
     small,
-    icon: Icon
+    icon : Icon
 }) => {
     return ( 
         <button
@@ -25,8 +25,8 @@ const Button: React.FC<ButtonProps> = ({
         disabled={disabled}
         className={`
             relative
-            disabled: opacity-70
-            diabled: cursor-not-allowed
+            disabled:opacity-70
+            diabled:cursor-not-allowed
             rounded-lg
             hover:opacity-80
             transition
