@@ -5,7 +5,7 @@ import {
     FieldValue, 
     UseFormRegister 
 } from "react-hook-form";
-import { BiDollar } from "react-icons/bi";
+import { TbCurrencyRupeeNepalese } from "react-icons/tb";
 
 interface InputProps {
     id: string;
@@ -14,8 +14,8 @@ interface InputProps {
     disabled?: boolean;
     formatPrice?: boolean;
     required?: boolean;
-    register: UseFormRegister<FieldValue>,
-    errors: FieldErrors
+    register: UseFormRegister<FieldValue>;
+    errors: FieldErrors;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -31,7 +31,7 @@ const Input: React.FC<InputProps> = ({
     return ( 
         <div className="w-full relative">
             {formatPrice && (
-                <BiDollar 
+                <TbCurrencyRupeeNepalese 
                 size={24}
                 className="
                 text-neutral-700
@@ -60,6 +60,7 @@ const Input: React.FC<InputProps> = ({
                 transition
                 disabled:opacity-70
                 disabled:cursor-not-allowed
+                ${formatPrice ? 'pl-10' : ''}
                 ${errors[id] ? 'border-rose-500' : 'border-neutral-300'}
                 ${errors[id] ? 'focus:border-rose-500' : 'focus:border-black'}
                 `}
