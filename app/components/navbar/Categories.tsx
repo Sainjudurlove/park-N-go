@@ -17,7 +17,7 @@ export const categories = [
     {
         label: 'Private',
         icon: GiHomeGarage,
-        description: 'This is a public parking spot!'
+        description: 'This is a private parking spot!'
     },
     {
         label: 'Bike',
