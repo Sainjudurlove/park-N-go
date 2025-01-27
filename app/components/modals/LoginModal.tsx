@@ -142,7 +142,7 @@ const LoginModal = () => {
         disabled={isLoading}
         isOpen={LoginModal.isOpen}
         title="Login"
-        actionLable="Continue"
+        actionLabel="Continue"
         onClose={LoginModal.onClose}
         onSubmit={handleSubmit(onSubmit)}
         body={bodyContent}
