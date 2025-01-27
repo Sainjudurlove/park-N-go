@@ -30,9 +30,8 @@ const SearchModal = () => {
 
     const [location, setLocation] = useState<CountrySelectValue>()
     const [step, setStep] = useState(STEPS.LOCATION);
-    const [carCount, setCarCount] = useState(1);
-    const [bikeCount, setBikeCount] = useState(1);
-    const [roomCount, setRoomCount] = useState(1);
+    const [carCount, setCarCount] = useState(0);
+    const [bikeCount, setBikeCount] = useState(0);
     const [dateRange, setDateRange] = useState<Range>({
         startDate: new Date(),
         endDate: new Date(),
@@ -66,8 +65,7 @@ const SearchModal = () => {
             ...currentQuery,
             locationValue: location?.value,
             carCount,
-            bikeCount,
-            roomCount
+            bikeCount
         };
 
         if (dateRange.startDate) {
@@ -95,7 +93,6 @@ const SearchModal = () => {
         router,
         bikeCount,
         carCount,
-        roomCount,
         dateRange,
         onNext,
         params
@@ -150,7 +147,22 @@ const SearchModal = () => {
     if (step === STEPS.INFO) {
         bodyContent = (
             <div className="flex flex-col gap-8">
-                
+                <Heading 
+                title="More information"
+                subtitle=""
+                />
+                <Counter
+                title="Bike"
+                subtitle="Number of bikes:"
+                value={bikeCount}
+                onChange={(value) => setBikeCount(value)}
+                />
+                <Counter
+                title="Car"
+                subtitle="Number of cars:"
+                value={carCount}
+                onChange={(value) => setCarCount(value)}
+                />
             </div>
         )
     }
