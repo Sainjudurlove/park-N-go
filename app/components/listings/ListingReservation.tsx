@@ -40,7 +40,7 @@ const ListingReservation: React.FC<ListingReservationProps> = ({
                     Rs {price}
                 </div>
                 <div className="font-light text-neutral-600">
-                    hour
+                    night
                 </div>
                 </div>                
                 <hr />
